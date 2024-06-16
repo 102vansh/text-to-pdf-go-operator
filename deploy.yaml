@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: dep-pdfconv
+  name: dep-pdfconv
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dep-pdfconv
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: dep-pdfconv
+    spec:
+      containers:
+      - image: vansh955/text-to-pdf:0.1.0
+        name: text-to-pdf
+        resources: {}
+status: {}

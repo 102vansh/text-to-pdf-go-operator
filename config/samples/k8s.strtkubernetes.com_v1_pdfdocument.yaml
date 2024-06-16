@@ -1,0 +1,15 @@
+apiVersion: k8s.strtkubernetes.com.my.domain/v1
+kind: PdfDocument
+metadata:
+  labels:
+    app.kubernetes.io/name: pdfdocument
+    app.kubernetes.io/instance: pdfdocument-sample
+    app.kubernetes.io/part-of: pdfdoc-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: pdfdoc-operator
+  name: pdfdocument-sample
+spec:
+  Documentname: my-text
+  text: 
+    ### My document
+    Hello **world**!  
